@@ -1,0 +1,28 @@
+create table employee(
+panno varchar(16),
+empno int,
+name varchar(40),
+gender char,
+dob date,
+address varchar(100),
+salary decimal(8,2),
+reportsto int,
+primary key (empno),
+foreign key (reportsto) references employee(empno));
+
+
+create table department(
+dno int,
+name varchar(20),
+address varchar(20),
+head int,
+primary key (dno),
+foreign key (head) references employee (empno)),
+
+
+
+alter table employee
+alter reportsto set default"007";
+
+alter table employee
+alter reportsto drop default;
